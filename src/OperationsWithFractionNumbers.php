@@ -2,55 +2,55 @@
 
 class OperationsWithFractionNumbers
 {
-	/**
-	 * Addition for FractionNumber.
-	 * 
-	 * @param FractionNumber $first
-	 * @param FractionNumber $second
-	 *
-	 * @return FractionNumber
-	 */
-	public static function addition(FractionNumber $first, FractionNumber $second)
-	{
-		$multi = self::multiplyWith($first->getDenominator(), $second->getDenominator());
+    /**
+     * Addition for FractionNumber.
+     *
+     * @param FractionNumber $first
+     * @param FractionNumber $second
+     *
+     * @return FractionNumber
+     */
+    public static function addition(FractionNumber $first, FractionNumber $second)
+    {
+        $multi = self::multiplyWith($first->getDenominator(), $second->getDenominator());
         $firstNumerator = $first->getNumerator() * $multi['first'];
         $secondNumerator = $second->getNumerator() * $multi['second'];
         $denominator = $multi['denominator'];
 
         return new FractionNumber(($firstNumerator + $secondNumerator), $denominator);
-	}
-	
-	/**
-	 * Subtraction for FractionNumber.
-	 * 
-	 * @param FractionNumber $first
-	 * @param FractionNumber $second
-	 *
-	 * @return FractionNumber
-	 */
-	public static function subtraction(FractionNumber $first, FractionNumber $second)
-	{
+    }
+
+    /**
+     * Subtraction for FractionNumber.
+     *
+     * @param FractionNumber $first
+     * @param FractionNumber $second
+     *
+     * @return FractionNumber
+     */
+    public static function subtraction(FractionNumber $first, FractionNumber $second)
+    {
         $multi = self::multiplyWith($first->getDenominator(), $second->getDenominator());
         $firstNumerator = $first->getNumerator() * $multi['first'];
         $secondNumerator = $second->getNumerator() * $multi['second'];
         $denominator = $multi['denominator'];
 
         return new FractionNumber(($firstNumerator - $secondNumerator), $denominator);
-	}
-	
-	/**
-	 * Multiplication for FractionNumber.
-	 * 
-	 * @param FractionNumber $first
-	 * @param FractionNumber $second
-	 *
-	 * @return FractionNumber
-	 */
-	public static function multiplication(FractionNumber $first, FractionNumber $second)
-	{
-	    return new FractionNumber(($first->getNumerator() * $second->getNumerator()),
+    }
+
+    /**
+     * Multiplication for FractionNumber.
+     *
+     * @param FractionNumber $first
+     * @param FractionNumber $second
+     *
+     * @return FractionNumber
+     */
+    public static function multiplication(FractionNumber $first, FractionNumber $second)
+    {
+        return new FractionNumber(($first->getNumerator() * $second->getNumerator()),
             ($first->getDenominator() * $second->getDenominator()));
-	}
+    }
 
     /**
      * Partition for FractionNumber.

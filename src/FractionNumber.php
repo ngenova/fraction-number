@@ -2,20 +2,20 @@
 
 class FractionNumber
 {
-	/**
-	 * Numerator for FractionNumber.
-	 * 
-	 * @var integer
-	 * @access protected
-	 */
-	protected $numerator;
-	
-	/**
-	 * Denominator for FractionNumber.
-	 * 
-	 * @var integer
-	 * @access protected
-	 */
+    /**
+     * Numerator for FractionNumber.
+     *
+     * @var integer
+     * @access protected
+     */
+    protected $numerator;
+
+    /**
+     * Denominator for FractionNumber.
+     *
+     * @var integer
+     * @access protected
+     */
     protected $denominator;
 
     /**
