@@ -1,0 +1,5 @@
+# Ignore vendor libraries
+/vendor/*
+
+# Ignore local editor
+.idea
